@@ -1,14 +1,14 @@
 from django.shortcuts import render
 
 # Create your views here.
-def base(request):
-	return render(request,'base.html')
+def index(request):
+	return render(request,'Index.html')
 
 def booking(request):
-	return render(request,'booking.html')
+	return render(request,'Booking.html')
 	
 def currency(request):
-	return render(request,'currency.html')
+	return render(request,'Currency.html')
 
 def gallery(request):
-	return render(request,'gallery.html')
+	return render(request,'Gallery.html')
