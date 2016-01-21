@@ -5,9 +5,9 @@ urlpatterns = patterns('',
     # Examples:
     # url(r'^$', 'Basic_Website.views.home', name='home'),
     # url(r'^blog/', include('blog.urls')),
-	url(r'^$','Webapp.views.index',name='base'),
-	url(r'booking.html','Webapp.views.booking',name='booking'),
-	url(r'gallery.html','Webapp.views.gallery',name='gallery'),
-	url(r'currency','Webapp.views.currency',name='currency'),
+	url(r'^$|Index.html','Webapp.views.index',name='base'),
+	url(r'Booking.html','Webapp.views.booking',name='booking'),
+	url(r'Gallery.html','Webapp.views.gallery',name='gallery'),
+	url(r'Currency','Webapp.views.currency',name='currency'),
     url(r'^admin/', include(admin.site.urls)),
 )
