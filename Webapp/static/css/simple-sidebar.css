@@ -67,7 +67,7 @@ R/*!
 .sidebar-nav li a {
     display: block;
     text-decoration: none;
-    color: #009999;
+    color: #999999;
 }
 
 .sidebar-nav li a:hover {
@@ -88,7 +88,7 @@ R/*!
 }
 
 .sidebar-nav > .sidebar-brand a {
-    color: #009999;
+    color: #999999;
 }
 
 .sidebar-nav > .sidebar-brand a:hover {
