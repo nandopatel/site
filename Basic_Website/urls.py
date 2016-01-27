@@ -8,6 +8,6 @@ urlpatterns = patterns('',
 	url(r'^$|Index.html','Webapp.views.index',name='base'),
 	url(r'Booking.html','Webapp.views.booking',name='booking'),
 	url(r'Gallery.html','Webapp.views.gallery',name='gallery'),
-	url(r'Currency','Webapp.views.currency',name='currency'),
+	url(r'Currency.html','Webapp.views.currency',name='currency'),
     url(r'^admin/', include(admin.site.urls)),
 )
