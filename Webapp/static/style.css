@@ -1,25 +1,24 @@
 body {
-	background-color: #E60061;
+    background-color: #FF9640;
 }
 #header {
-    	background-color:black;
-    	color:white;
-    	text-align:center;
-    	padding:5px;
-	background-color: #FF2C00;
-	opacity: 0.9
-	font-family:Arial;
+        background-color:black;
+        color:white;
+        text-align:center;
+        padding:5px;
+    background-color: #009999;
+    opacity: 0.9
+    font-family:Arial;
 }
 #nav {
     line-height:30px;
-    background-color:#eeeeee;
+    background-color:#009999;
     height:550px;
     width:159px;
     float:left;
-    padding:5px;	
+    padding:5px;    
     font-family: Arial,sans-serif;
     font-size: 30px;
-    background-color: #FF2C00;
     opacity:;
 }
 #section {
@@ -27,7 +26,7 @@ body {
     float:left;
     padding:10px;
     font-family: Arial,sans-serif;
-    background-color: #E60061;
+    background-color: #FF9640;
 }
 #footer {
     background-color:black;
@@ -36,8 +35,8 @@ body {
     text-align:center;
     padding:5px;
     font-family: Arial,sans-serif;
-    background-color: #A005C6
-    	
+    background-color: #009999
+        
 }
 h2 {
 font-size:40px;
