@@ -1,42 +1,112 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-<link rel="stylesheet" type="text/css" href="/static/style.css">
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Bare - Start Bootstrap Template</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="/static/Currency/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <style>
+    body {
+        padding-top: 70px;
+        /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+    }
+    </style>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
 </head>
-<body> 
-<div id="header">
+
+<body>
 
 
-<h1>Converter</h1>
-</div>
-
-<div id="nav">
-    <br><a href="Index.html">Home</a></br>
-    <br><a href="Gallery.html">Photos</a></br>
-    <br><a href="Booking.html">Book now!</a></br>
-    <br><b><a href="Currency.html">Currency Converter</a></b></br>
-</div>
-<div id="section">
-<p>
-1 Singapore Dollar equals
-0.46 British Pound <br>
-1 Singapore Dollar equals
-0.71 US Dollar
 <!-- FXEXCHANGERATE.COM EXCHANGE RATE CONVERTER START --><div style="width:468px;height:90px;border:1px solid #00CCFF;background-color:#ACEEFC;"><div style="background-color:#00CCFF;height:18px;text-align:left;width:464px; margin:2px 0px 0px 2px;"><a target="new" style="color:#FFFFFF;font-size:14px;font-weight:Bold;font-family:arial; text-decoration:none;padding-left:5px;" href="http://www.fxexchangerate.com/">Currency Converter</a></div><script type="text/javascript">var fm="GBP";var ft="SGD";var hb="00CCFF";var hc="FFFFFF";var bb="ACEEFC";var bo="00CCFF";var tz="timezone";var wh="468x90";var lg="en";</script><script type="text/javascript" src="http://www.fxexchangerate.com/converter.php"></script></div><!-- FXEXCHANGERATE.COM  EXCHANGE RATE CONVERTER END -->
+
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Start Bootstrap</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="#">About</a>
+                    </li>
+                    <li>
+                        <a href="#">Services</a>
+                    </li>
+                    <li>
+                        <a href="#">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Page Content -->
+    <div class="container">
+
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h1>A Bootstrap Starter Template</h1>
+                <p class="lead">Complete with pre-defined file paths that you won't have to change!</p>
+                <ul class="list-unstyled">
+                    <li>Bootstrap v3.3.6</li>
+                    <li>jQuery v1.11.1</li>
+                </ul>
+            </div>
+        </div>
+        <!-- /.row -->
+
+    </div>
+    <!-- /.container -->
+
+    <!-- jQuery Version 1.11.1 -->
+    <script src="static/Currency/js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="static/Currency/js/bootstrap.min.js"></script>
+
+
 <button onclick="myFunction()">Checkout</button>
 
 <script>
 function myFunction() {
     alert("Thank you for purchasing with us, you singapore dollars will come in the post within the following days :)");
-}
 </script>
-</p>
 </div>
 <div id="footer">
-Copyright © Anand Patel's Amazing Web Development LTD
+'Copyright © Anand Patels Amazing Web Development LTD'
 </div>
 
 
-</div>
 </body>
+
 </html>
+
