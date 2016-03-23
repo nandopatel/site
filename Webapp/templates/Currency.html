@@ -107,14 +107,14 @@
   <title>JavaScript Card Game | The Art of Web</title>
  
 
- <button onclick="myFunction()">Click me</button> 
+ <button onclick="<script>
+document.getElementById("ItemPreview").src = "static/cards/"+ (1+parseInt((Math.random() * 8), 10)).toString()+"H.png";
+</script>">Click me</button> 
 
 <img id="ItemPreview" src="" />
 
 <script>
-var myFunction(){
 document.getElementById("ItemPreview").src = "static/cards/"+ (1+parseInt((Math.random() * 8), 10)).toString()+"H.png";
-};
 </script>
 
 
