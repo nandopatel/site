@@ -58,7 +58,7 @@
                     <a href="http://www.booking.com/index.html?label=gen173nr-1FCAEoggJCAlhYSDNiBW5vcmVmaFCIAQGYATG4AQzIAQzYAQHoAQH4AQKoAgM;sid=7f9176e24d75657470a2ba71b70e3e79;dcid=4;bb_ltbi=0&sb_price_type=total&">Book now!</a>
                 </li>
                 <li>
-                    <a href="Currency.html">test</a>
+                    <a href="Currency.html">lst[(parseInt((Math.random() * 4), 10))]</a>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -123,14 +123,14 @@
 <script>
 function myFunction() {
 lst=["H","D","C","S"] //HEARTS DIAMONDS CLUBS SPADES
-test=lst[(parseInt((Math.random() * 4), 10))]
-document.getElementById("ItemPreview1").src = "static/cards/"+ (1+parseInt((Math.random() * 10), 10)).toString()+test+".png";
-document.getElementById("ItemPreview2").src = "static/cards/"+ (1+parseInt((Math.random() * 10), 10)).toString()+test+".png";
-document.getElementById("ItemPreview3").src = "static/cards/"+ (1+parseInt((Math.random() * 10), 10)).toString()+test+".png";
-document.getElementById("ItemPreview4").src = "static/cards/"+ (1+parseInt((Math.random() * 10), 10)).toString()+test+".png";
-document.getElementById("ItemPreview5").src = "static/cards/"+ (1+parseInt((Math.random() * 10), 10)).toString()+test+".png";
-document.getElementById("ItemPreview6").src = "static/cards/"+ (1+parseInt((Math.random() * 10), 10)).toString()+test+".png";
-document.getElementById("ItemPreview7").src = "static/cards/"+ (1+parseInt((Math.random() * 10), 10)).toString()+test+".png";
+
+document.getElementById("ItemPreview1").src = "static/cards/"+ (1+parseInt((Math.random() * 10), 10)).toString()+lst[(parseInt((Math.random() * 4), 10))]+".png";
+document.getElementById("ItemPreview2").src = "static/cards/"+ (1+parseInt((Math.random() * 10), 10)).toString()+lst[(parseInt((Math.random() * 4), 10))]+".png";
+document.getElementById("ItemPreview3").src = "static/cards/"+ (1+parseInt((Math.random() * 10), 10)).toString()+lst[(parseInt((Math.random() * 4), 10))]+".png";
+document.getElementById("ItemPreview4").src = "static/cards/"+ (1+parseInt((Math.random() * 10), 10)).toString()+lst[(parseInt((Math.random() * 4), 10))]+".png";
+document.getElementById("ItemPreview5").src = "static/cards/"+ (1+parseInt((Math.random() * 10), 10)).toString()+lst[(parseInt((Math.random() * 4), 10))]+".png";
+document.getElementById("ItemPreview6").src = "static/cards/"+ (1+parseInt((Math.random() * 10), 10)).toString()+lst[(parseInt((Math.random() * 4), 10))]+".png";
+document.getElementById("ItemPreview7").src = "static/cards/"+ (1+parseInt((Math.random() * 10), 10)).toString()+lst[(parseInt((Math.random() * 4), 10))]+".png";
 
 }
 </script>
