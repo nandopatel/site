@@ -122,13 +122,15 @@
 
 <script>
 function myFunction() {
-document.getElementById("ItemPreview1").src = "static/cards/"+ (1+parseInt((Math.random() * 8), 10)).toString()+"H.png";
-document.getElementById("ItemPreview2").src = "static/cards/"+ (1+parseInt((Math.random() * 8), 10)).toString()+"H.png";
-document.getElementById("ItemPreview3").src = "static/cards/"+ (1+parseInt((Math.random() * 8), 10)).toString()+"H.png";
-document.getElementById("ItemPreview4").src = "static/cards/"+ (1+parseInt((Math.random() * 8), 10)).toString()+"H.png";
-document.getElementById("ItemPreview5").src = "static/cards/"+ (1+parseInt((Math.random() * 8), 10)).toString()+"H.png";
-document.getElementById("ItemPreview6").src = "static/cards/"+ (1+parseInt((Math.random() * 8), 10)).toString()+"H.png";
-document.getElementById("ItemPreview7").src = "static/cards/"+ (1+parseInt((Math.random() * 8), 10)).toString()+"H.png";
+lst=["H","D","C","S"] //HEARTS DIAMONDS CLUBS SPADES
+test=lst[(parseInt((Math.random() * 3), 10))]
+document.getElementById("ItemPreview1").src = "static/cards/"+ (1+parseInt((Math.random() * 9), 10)).toString()+test+".png";
+document.getElementById("ItemPreview2").src = "static/cards/"+ (1+parseInt((Math.random() * 9), 10)).toString()+"H.png";
+document.getElementById("ItemPreview3").src = "static/cards/"+ (1+parseInt((Math.random() * 9), 10)).toString()+"H.png";
+document.getElementById("ItemPreview4").src = "static/cards/"+ (1+parseInt((Math.random() * 9), 10)).toString()+"H.png";
+document.getElementById("ItemPreview5").src = "static/cards/"+ (1+parseInt((Math.random() * 9), 10)).toString()+"H.png";
+document.getElementById("ItemPreview6").src = "static/cards/"+ (1+parseInt((Math.random() * 9), 10)).toString()+"H.png";
+document.getElementById("ItemPreview7").src = "static/cards/"+ (1+parseInt((Math.random() * 9), 10)).toString()+"H.png";
 
 }
 </script>
