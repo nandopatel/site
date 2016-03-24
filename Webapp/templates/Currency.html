@@ -109,10 +109,19 @@
 
 <button onclick="myFunction()">Click me</button>
 
+<table style="width:100%">
+  <tr>
+    <td><img id="ItemPreview1" src="" height="120" width="100"/></td>
+    <td><img id="ItemPreview2" src="" height="120" width="100"/></td>		
+    <td><img id="ItemPreview3" src="" height="120" width="100"/></td>
+  
+</table>
 
 <script>
 function myFunction() {
-document.getElementById("ItemPreview").src = "static/cards/"+ (1+parseInt((Math.random() * 8), 10)).toString()+"H.png";
+document.getElementById("ItemPreview1").src = "static/cards/"+ (1+parseInt((Math.random() * 8), 10)).toString()+"H.png";
+document.getElementById("ItemPreview2").src = "static/cards/"+ (1+parseInt((Math.random() * 8), 10)).toString()+"H.png";
+document.getElementById("ItemPreview3").src = "static/cards/"+ (1+parseInt((Math.random() * 8), 10)).toString()+"H.png";
 }
 </script>
 
