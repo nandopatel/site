@@ -12,3 +12,5 @@ def currency(request):
 
 def gallery(request):
 	return render(request,'Gallery.html')
+def rpg(request):
+	return render(request,'rpg.html')

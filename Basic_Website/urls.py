@@ -9,6 +9,7 @@ urlpatterns = patterns('',
 	url(r'Booking.html','Webapp.views.booking',name='booking'),
 	url(r'Gallery.html','Webapp.views.gallery',name='gallery'),
 	url(r'Currency.html','Webapp.views.currency',name='currency'),
+	url(r'rpg.html','Webapp.views.rpg',name='rpg'),
     url(r'^admin/', include(admin.site.urls)),
     (r'^accounts/', include('registration.backends.default.urls')),
 )
