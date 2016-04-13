@@ -75,7 +75,7 @@ def rpg(request):
 		inventory['exp'] = int(inventory['exp'])
 		
 	context={
-		"startcomment":startcomment,
+		"startcomment":start()[0],
 		"getlogs":getlogs,
 		"goblincomment":goblincomment,
 		"givelogs":givelogs,
