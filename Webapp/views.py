@@ -28,6 +28,8 @@ def rpg(request):
 
 	def start():
 		#startchoice = raw_input("Would you like to start the game ('y' for yes)?: ")
+		global startcomment,getlogs,goblincomment,givelogs
+		
 		startchoice = 'y'
 		if startchoice == "y":
 			startcomment = "You start off in the world, level yourself up, gain resources and smash enemies. Start by chopping some wood to level your woodchopping"
@@ -75,7 +77,7 @@ def rpg(request):
 		inventory['exp'] = int(inventory['exp'])
 		
 	context={
-		"startcomment":start()[0],
+		"startcomment":startcomment,
 		"getlogs":getlogs,
 		"goblincomment":goblincomment,
 		"givelogs":givelogs,
