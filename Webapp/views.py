@@ -34,7 +34,7 @@ def rpg(request):
 		if startchoice == "y":
 			startcomment = "You start off in the world, level yourself up, gain resources and smash enemies. Start by chopping some wood to level your woodchopping"
 			getlogs=chopwood()
-			goblincomment,givelogs=randomeventgoblin()
+			#goblincomment,givelogs=randomeventgoblin()
 			getexp()
 			seeinventory()
 		else:
@@ -79,8 +79,7 @@ def rpg(request):
 	context={
 		"startcomment":startcomment,
 		"getlogs":getlogs,
-		"goblincomment":goblincomment,
-		"givelogs":givelogs,
+		
 		"inventory":inventory,
 		
 	
