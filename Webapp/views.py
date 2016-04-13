@@ -41,6 +41,7 @@ def rpg(request):
 			print "Shutting down..."
 			exit
 			
+			
 		return startcomment,getlogs
 		
 
