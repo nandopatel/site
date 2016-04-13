@@ -75,7 +75,7 @@ def rpg(request):
 		#print int(3+multiplyer/100.0)
 		inventory['exp']=inventory['logs']*(3+multiplyer/100.0)
 		inventory['exp'] = int(inventory['exp'])
-		
+	start()	
 	context={
 		"startcomment":startcomment,
 		"getlogs":getlogs,
