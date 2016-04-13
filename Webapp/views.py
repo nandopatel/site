@@ -22,7 +22,7 @@ def rpg(request):
 	import os
 	from time import sleep
 	from random import randint
-	from tqdm import tqdm
+	#from tqdm import tqdm
 	import sys 
 
 
@@ -46,8 +46,8 @@ def rpg(request):
 	def chopwood(inventory=inventory):
 		sys.stdout.flush()
 		
-		for x in tqdm(range(1,200000)):
-			pass
+		#for x in tqdm(range(1,200000)):
+			#pass
 		getlogs = "+5 logs"
 		inventory['logs'] += 5
 		return getlogs
