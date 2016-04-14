@@ -62,15 +62,40 @@
 
 	
 	
-	
-	<div class="image">
-	
-      <img src = "/static/yosemitevalley.jpg"height="1080" width="1920">
-      
-	  <h2>{{startcomment}}<br />{{inventory}}</h2>
 
-	</div>
 	
+      <img src = height="1080" width="1920">
+      
+
+
+	<style>
+div.background {
+  background: url(/static/yosemitevalley.jpg) repeat;
+  border: 2px solid black;
+}
+
+div.transbox {
+  margin: 30px;
+  background-color: #ffffff;
+  border: 1px solid black;
+  opacity: 0.6;
+  filter: alpha(opacity=60); /* For IE8 and earlier */
+}
+
+div.transbox p {
+  margin: 5%;
+  font-weight: bold;
+  color: #000000;
+}
+</style>
+</head>
+<body>
+
+<div class="background">
+  <div class="transbox">
+  <h2>{{startcomment}}<br />{{inventory}}</h2>
+  </div>
+</div>
 	
 	
 	
