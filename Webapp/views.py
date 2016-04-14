@@ -32,7 +32,9 @@ def rpg(request):
 		
 		startchoice = 'y'
 		if startchoice == "y":
-			startcomment = "You start off in the world, level yourself up, gain resources and smash enemies. Start by chopping some wood to level your woodchopping"
+			startcomment = """You start off in the world, level yourself up, 
+			gain resources and smash enemies. 
+			Start by chopping some wood to level your woodchopping"""
 			getlogs=chopwood()
 			#goblincomment,givelogs=randomeventgoblin()
 			getexp()
