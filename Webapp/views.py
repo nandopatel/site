@@ -84,6 +84,7 @@ def rpg(request):
 		"getlogs":getlogs,
 		
 		"inventory":inventory,
+		'exp':inventory['exp'],
 		
 	
 	}
