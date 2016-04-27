@@ -17,7 +17,8 @@ def rpg(request):
 		'exp':1,
 	   'logs':0
 	}
-
+def formulas(request):
+	return render(request,'formulas.html')
 
 	import os
 	from time import sleep
@@ -123,6 +124,43 @@ def get_name(request):
     else:
         form = NameForm()
 
+		
+		
     return render(request, 'rpg.html', {'form': form})
 	
 	
+	
+	
+	
+	
+def textgen(request):
+	import string
+	import random
+	import time
+
+	possibleCharacters = string.ascii_lowercase + string.digits + string.ascii_uppercase + ' .,!?;:'
+	target = "Welcome"
+	attemptThis = ''.join(random.choice(possibleCharacters) for i in range(len(target)))
+	attemptNext = ''
+
+	completed = False
+
+	generation = 0
+	lst=[]
+	while completed == False:
+		lst.append(attemptThis)
+		attemptNext = ''
+		completed = True
+		for i in range(len(target)):
+			if attemptThis[i] != target[i]:
+				completed = False
+				attemptNext += random.choice(possibleCharacters)
+			else:
+				attemptNext += target[i]
+		generation += 1
+		attemptThis = attemptNext
+		
+
+	lst.append("Target matched! That took " + str(generation) + " generation(s)")	
+	context={'list':lst}
+	return render(request,'rpg.html',context)
