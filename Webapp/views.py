@@ -36,7 +36,7 @@ def formulas(request):
 		'gforce': form.data['gforce'],
 		}
 		
-		return render(request, 'formulas.html',context)
+	return render(request, 'formulas.html',context)
 	
 
 	
