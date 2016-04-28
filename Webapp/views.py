@@ -27,14 +27,14 @@ def rpg(request):
 	}
 def formulas(request):
 	form = NameForm(request.POST)
-	if form.is_valid():
-		context= {
+	
+	context= {
 			 
-		'distance': form.data['distance'],
-		'timetaken': form.data['timetaken'],
-		'mass': form.data['mass'],
-		'gforce': form.data['gforce'],
-		}
+	'distance': form.data['distance'],
+	'timetaken': form.data['timetaken'],
+	'mass': form.data['mass'],
+	'gforce': form.data['gforce'],
+	}
 		
 	return render(request, 'formulas.html',context)
 	
