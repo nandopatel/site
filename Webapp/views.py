@@ -79,7 +79,7 @@ def formulas(request):
 	def seeinventory():
 		print inventory
 
-	def randomeventgoblin(inventory=inventory):    
+	def randomeventgoblin():    
 		randomnumber = randint(0, 10)
 		levelnumber = randint(5, 10)
 		if randomnumber >= 5:
@@ -92,7 +92,7 @@ def formulas(request):
 	def test_form(request):
 		return render(request,'test_form.html')
 			
-	def getexp(inventory=inventory):
+	def getexp():
 		multiplyer = inventory['exp']/10
 		#print multiplyer
 		#print multiplyer/100.0
