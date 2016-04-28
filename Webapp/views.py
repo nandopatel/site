@@ -58,8 +58,9 @@ def speedcalc(d,t):
     print "Time taken: ", t
     print d/t, "m/s"
     return dct
+
 	
-	def portfolio(request):
+def portfolio(request):
 	context={'X':55}
 	return render(request,'portfolio.html',context)
 	
