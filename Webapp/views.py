@@ -67,7 +67,7 @@ def formulas(request):
 		
 
 
-	def chopwood(inventory=inventory):
+	def chopwood():
 		sys.stdout.flush()
 		
 		#for x in tqdm(range(1,200000)):
