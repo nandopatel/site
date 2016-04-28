@@ -33,7 +33,7 @@ def formulas(request):
 	#'timetaken': form.data['timetaken'],
 	#'mass': form.data['mass'],
 	#'gforce': form.data['gforce'],
-
+	'form':form,
 	}
 		
 	return render(request, 'formulas.html',context)
