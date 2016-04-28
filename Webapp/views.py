@@ -164,3 +164,20 @@ def textgen(request):
 	lst.append("Target matched! That took " + str(generation) + " generation(s)")	
 	context={'list':lst}
 	return render(request,'rpg.html',context)
+
+	
+	
+def findweight(m,g):
+    d={'weight':m*g,'mass':m,'gForce':g}
+     
+   
+    print "Your mass is", m
+    print "The gravitational force is", g
+    #Earth gravitational field strenghth is 9.8m/s
+    print "Your weight is", m*g
+    return d
+	
+	
+	
+	
+	
