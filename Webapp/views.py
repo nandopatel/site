@@ -29,7 +29,7 @@ def formulas(request):
 	form = NameForm(request.POST)
 	
 	context= {
-	'distance': form.data['distance'],
+	'distance': form.data,
 	#'timetaken': form.data['timetaken'],
 	#'mass': form.data['mass'],
 	#'gforce': form.data['gforce'],
