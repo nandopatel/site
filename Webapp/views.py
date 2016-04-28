@@ -176,6 +176,15 @@ def findweight(m,g):
     #Earth gravitational field strenghth is 9.8m/s
     print "Your weight is", m*g
     return d
+
+def speedcalc(d,t):
+    dct={"distance":d,"timetaken":t,"speed":d/t}
+    
+    print "Speed calculator"
+    print "Distance covered: ", d
+    print "Time taken: ", t
+    print d/t, "m/s"
+    return dct
 	
 	
 	
