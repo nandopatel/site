@@ -25,23 +25,23 @@ def rpg(request):
 	}
 def formulas(request):
 
-	 form = NameForm(request.POST)
-        # check whether it's valid:
-        if form.is_valid():
-			context= {
+	form = NameForm(request.POST)
+    # check whether it's valid:
+    if form.is_valid():
+		context= {
 			 
-			'distance': form.data['distance'],
-			'timetaken': form.data['timetaken'],
-			'mass': form.data['mass'],
-			'gforce': form.data['gforce'],
-			}
+		'distance': form.data['distance'],
+		'timetaken': form.data['timetaken'],
+		'mass': form.data['mass'],
+		'gforce': form.data['gforce'],
+		}
 		
 		
-            # process the data in form.cleaned_data as required
-            # ...
-            # redirect to a new URL:
-            #return HttpResponse('<html><p>hello</p>'+str(form.data['your_name'])+' '+str(form.data['your_move'])+'</html>')
-			return render(request, 'formulas.html',context)
+        # process the data in form.cleaned_data as required
+        # ...
+        # redirect to a new URL:
+        #return HttpResponse('<html><p>hello</p>'+str(form.data['your_name'])+' '+str(form.data['your_move'])+'</html>')
+		return render(request, 'formulas.html',context)
 			
 	
 
