@@ -24,10 +24,8 @@ def rpg(request):
 	   'logs':0
 	}
 def formulas(request):
-
 	form = NameForm(request.POST)
-    # check whether it's valid:
-    if form.is_valid():
+	if form.is_valid():
 		context= {
 			 
 		'distance': form.data['distance'],
