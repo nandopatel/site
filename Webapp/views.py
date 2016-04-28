@@ -1,5 +1,11 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+import os
+from time import sleep
+from random import randint
+#from tqdm import tqdm
+import sys 
+
 # Create your views here.
 def index(request):
 	return render(request,'Index.html')
@@ -18,14 +24,28 @@ def rpg(request):
 	   'logs':0
 	}
 def formulas(request):
-	return render(request,'formulas.html')
 
-	import os
-	from time import sleep
-	from random import randint
-	#from tqdm import tqdm
-	import sys 
+	 form = NameForm(request.POST)
+        # check whether it's valid:
+        if form.is_valid():
+			context= {
+			 
+			'distance': form.data['distance'],
+			'timetaken': form.data['timetaken'],
+			'mass': form.data['mass'],
+			'gforce': form.data['gforce'],
+			}
+		
+		
+            # process the data in form.cleaned_data as required
+            # ...
+            # redirect to a new URL:
+            #return HttpResponse('<html><p>hello</p>'+str(form.data['your_name'])+' '+str(form.data['your_move'])+'</html>')
+			return render(request, 'formulas.html',context)
+			
+	
 
+	
 
 	def start():
 		#startchoice = raw_input("Would you like to start the game ('y' for yes)?: ")
