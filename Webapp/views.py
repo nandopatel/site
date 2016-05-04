@@ -80,7 +80,7 @@ def feedback(request):
             'Gravitational_Force':request.POST.get('Gravitational_Force'),
 			'mass':request.POST.get('mass'),
 			'time':request.POST.get('time'),
-			'distance_travelled':request.POST.get('distance'),
+			'distance_travelled':request.POST.get('distance_travelled'),
 			'speed':request.POST.get('speed'),
 			}
 
