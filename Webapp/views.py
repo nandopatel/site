@@ -75,9 +75,9 @@ def feedback(request):
 		#form = speedandweightForm(request.POST)
 		
 		context= {
-			'comments':request.POST.get('name'),
-			'weight':request.POST.get('email'),
-            'Gravitational_Force':request.POST.get('feedback'),
+			'comments':request.POST.get('comments'),
+			'weight':request.POST.get('weight'),
+            'Gravitational_Force':request.POST.get('Gravitational_Force'),
 			'mass':request.POST.get('mass'),
 			'time':request.POST.get('time'),
 			'distance_travelled':request.POST.get('distance'),
