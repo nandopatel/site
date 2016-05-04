@@ -81,7 +81,7 @@ def feedback(request):
 		ans=d/t
 		context= {
 			'comments':request.POST.get('comments'),
-			'weight':ans2
+			'weight':ans2,
             'Gravitational_Force':request.POST.get('Gravitational_Force'),
 			'mass':request.POST.get('mass'),
 			'time':request.POST.get('time'),
