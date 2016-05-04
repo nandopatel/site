@@ -72,7 +72,7 @@ from .forms import speedandweightForm
 
 def feedback(request):
     if request.method == "POST":
-		form = speedandweightForm(request.POST)
+		#form = speedandweightForm(request.POST)
 		
 		context= {
 			'comments':request.POST.get('name'),
