@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .forms import NameForm
+#from .forms import NameForm
 from django.http import HttpResponseRedirect
 from django.http import HttpResponse
 import os
