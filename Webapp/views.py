@@ -72,8 +72,8 @@ from .forms import speedandweightForm
 
 def feedback(request):
     if request.method == "POST":
-        form = speedandweightForm(request.POST)
-        
+		form = speedandweightForm(request.POST)
+		context={}
 		return render(request,'rpg.html',context)
                 #).save()
 				
