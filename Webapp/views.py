@@ -84,7 +84,7 @@ def feedback(request):
             #post.author = request.user
             #post.published_date = timezone.now()
            # post.save()
-            return HttpResponseRedirect('https://desolate-falls-15706.herokuapp.com')
+            #return HttpResponseRedirect('https://desolate-falls-15706.herokuapp.com')
     else:
         form = speedandweightForm()
     return render(request, 'rpg.html', {'form': form})	
