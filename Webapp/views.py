@@ -68,7 +68,7 @@ def portfolio(request):
 	
 	
 	
-from .forms import speedandweight
+from .forms import speedandweightForm
 
 def feedback(request):
     if request.method == "POST":
