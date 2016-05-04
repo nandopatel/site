@@ -73,14 +73,21 @@ from .forms import speedandweightForm
 def feedback(request):
     if request.method == "POST":
         form = speedandweightForm(request.POST)
-        #if form.is_valid():
+        if form.is_valid():
             #post = form.save(commit=False)
-            #comments(
-                #name=request.POST.get('name'),
-                #email=request.POST.get('email'),
-                #feedback=request.POST.get('feedback')
-
+            context= {
+                'comments':request.POST.get('name'),
+                'weight':request.POST.get('email'),
+                'Gravitational_Force':request.POST.get('feedback'),
+				'mass':request.POST.get('mass'),
+				'time':request.POST.get('time'),
+				'distance_travelled':request.POST.get('distance'),
+				'speed':request.POST.get('speed'),
+				
+				}
+			return render(request,'rpg.html',context)
                 #).save()
+				
             #post.author = request.user
             #post.published_date = timezone.now()
            # post.save()
@@ -88,7 +95,7 @@ def feedback(request):
     else:
         form = speedandweightForm()
     return render(request, 'rpg.html', {'form': form})	
-	
+
 	
 	
 	
