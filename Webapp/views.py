@@ -74,7 +74,7 @@ def feedback(request):
     if request.method == "POST":
         form = speedandweightForm(request.POST)
         
-			return render(request,'rpg.html',context)
+		return render(request,'rpg.html',context)
                 #).save()
 				
             #post.author = request.user
