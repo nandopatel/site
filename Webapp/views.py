@@ -75,10 +75,13 @@ def feedback(request):
 		#form = speedandweightForm(request.POST)
 		d=float(request.POST.get('distance_travelled'))
 		t=float(request.POST.get('time'))
+		m=float(request.POST.get('mass'))
+		g=float(request.POST.get('Gravitational_Force'))
+		ans2=m*g
 		ans=d/t
 		context= {
 			'comments':request.POST.get('comments'),
-			'weight':request.POST.get('weight'),
+			'weight':ans2
             'Gravitational_Force':request.POST.get('Gravitational_Force'),
 			'mass':request.POST.get('mass'),
 			'time':request.POST.get('time'),
