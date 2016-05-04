@@ -81,7 +81,7 @@ def feedback(request):
 			'mass':request.POST.get('mass'),
 			'time':request.POST.get('time'),
 			'distance_travelled':request.POST.get('distance_travelled'),
-			'speed':request.POST.get('speed'),
+			'speed':request.POST.get('distance_travelled')/request.POST.get('time'),
 			}
 
 		return render(request,'rpg.html',context)
