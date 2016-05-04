@@ -74,8 +74,7 @@ def feedback(request):
     if request.method == "POST":
         form = speedandweightForm(request.POST)
         if form.is_valid():
-            #post = form.save(commit=False)
-            context= {
+			context= {
                 'comments':request.POST.get('name'),
                 'weight':request.POST.get('email'),
                 'Gravitational_Force':request.POST.get('feedback'),
@@ -85,7 +84,7 @@ def feedback(request):
 				'speed':request.POST.get('speed'),
 				
 				}
-		return render(request,'rpg.html',context)
+			return render(request,'rpg.html',context)
                 #).save()
 				
             #post.author = request.user
