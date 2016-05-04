@@ -73,7 +73,17 @@ from .forms import speedandweightForm
 def feedback(request):
     if request.method == "POST":
 		form = speedandweightForm(request.POST)
-		context={}
+		
+		context= {
+			'comments':request.POST.get('name'),
+			'weight':request.POST.get('email'),
+            'Gravitational_Force':request.POST.get('feedback'),
+			'mass':request.POST.get('mass'),
+			'time':request.POST.get('time'),
+			'distance_travelled':request.POST.get('distance'),
+			'speed':request.POST.get('speed'),
+			}
+
 		return render(request,'rpg.html',context)
                 #).save()
 				
