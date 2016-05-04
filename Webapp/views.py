@@ -68,5 +68,27 @@ def portfolio(request):
 	
 	
 	
+from .forms import speedandweight
+
+def feedback(request):
+    if request.method == "POST":
+        form = speedandweightForm(request.POST)
+        #if form.is_valid():
+            #post = form.save(commit=False)
+            #comments(
+                #name=request.POST.get('name'),
+                #email=request.POST.get('email'),
+                #feedback=request.POST.get('feedback')
+
+                #).save()
+            #post.author = request.user
+            #post.published_date = timezone.now()
+           # post.save()
+            return HttpResponseRedirect('https://desolate-falls-15706.herokuapp.com')
+    else:
+        form = speedandweightForm()
+    return render(request, 'rpg.html', {'form': form})	
+	
+	
 	
 	
