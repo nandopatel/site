@@ -1,4 +1,5 @@
-<html>
+{% extends "base.html" %}
+{%block content%}
 
  <form method="POST" class="post-form">{% csrf_token %}
         <table>
@@ -8,4 +9,4 @@
     </form>
 
 
-</html>
+{%endblock%}
