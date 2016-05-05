@@ -89,7 +89,7 @@ def feedback(request):
 			'speed':ans
 			}
 
-		return render(request,'rpg.html',context)
+		return render(request,'rpg2.html',context)
                 #).save()
 				
             #post.author = request.user
