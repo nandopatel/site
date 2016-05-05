@@ -1,4 +1,5 @@
-<html>
+{% extends "base.html" %}
+{%block content%}
 <p>mass={{mass}}</p>
 <p>distance={{distance_travelled}}</p>
 <p>gForce{{Gravitational_Force}}</p>
@@ -6,5 +7,4 @@
 <h1>Calculated answers:</h1>
 <p>speed={{speed}} m/s</p>
 <p>weight={{weight}} N</p>
-
-</html>
+{%endblock%}
