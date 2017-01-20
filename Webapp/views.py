@@ -1,15 +1,18 @@
+#imports
 from django.shortcuts import render
-#from .forms import NameForm
+import requests
+from bs4 import BeautifulSoup
 from django.http import HttpResponseRedirect
 from django.http import HttpResponse
 import os
 from time import sleep
 from random import randint
-#from tqdm import tqdm
 import sys 
-
+import requests
+import re
 # Create your views here.
 def index(request):
+	
 	return render(request,'Index.html')
 
 def booking(request):
@@ -63,11 +66,19 @@ def speedcalc(d,t):
 
 	
 def portfolio(request):
-	context={'X':55}
-	return render(request,'portfolio.html',context)
-	
-	
-	
+	data=requests.get('https://github.com/nandopatel').content
+	soup=BeautifulSoup(data)
+	resp=soup.findAll('h2', {"class":"f4 text-normal mb-2"})[0]
+	contributions=re.findall('>.*<',str(resp),re.DOTALL)[0].replace('>','').replace('<','')
+
+
+	lst=soup.findAll('div',{"class":"js-calendar-graph is-graph-loading graph-canvas calendar-graph height-full"})
+
+	cal=re.sub(r'(>)(.*?</text>)',r'fill=grey\1\2',str(lst[0]))
+
+	return render(request,'portfolio.html',{'calender':cal,'contributions':contributions})
+
+
 from .forms import speedandweightForm
 
 def feedback(request):
