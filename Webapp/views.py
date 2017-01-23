@@ -74,7 +74,8 @@ def portfolio(request):
 
 	lst=soup.findAll('div',{"class":"js-calendar-graph is-graph-loading graph-canvas calendar-graph height-full"})
 
-	cal=re.sub(r'(>)(.*?</text>)',r'fill=grey\1\2',str(lst[0]))
+	cal=re.sub(r'(>)(.*?</text>)',r'align=center fill=grey\1\2',str(lst[0]))
+	
 
 	return render(request,'portfolio.html',{'calender':cal,'contributions':contributions})
 
