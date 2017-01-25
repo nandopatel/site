@@ -74,9 +74,12 @@ def portfolio(request):
 
 	lst=soup.findAll('div',{"class":"js-calendar-graph is-graph-loading graph-canvas calendar-graph height-full"})
 
-	cal=re.sub(r'(>)(.*?</text>)',r'align=center fill=grey\1\2',str(lst[0]))
+	cal=re.sub(r'(>)(.*?</text>)',r'fill=grey\1\2',str(lst[0]))
 	
-
+	svg_def='<svg class="js-calendar-graph-svg" height="104" width="676">'
+	svg_def_new='<svg class="js-calendar-graph-svg" height="104" width="676" align="center">'
+	cal=re.sub(svg_def,svg_def_new,cal)
+	cal='<div text-align="center">'+cal+'</div>'
 	return render(request,'portfolio.html',{'calender':cal,'contributions':contributions})
 
 
