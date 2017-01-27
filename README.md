@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Heroku Django Starter Template
 
 An utterly fantastic project starter template for Django 1.9.
@@ -39,3 +40,6 @@ You can replace ``helloworld`` with your desired project name.
 - [Gunicorn](https://warehouse.python.org/project/gunicorn/)
 - [WhiteNoise](https://warehouse.python.org/project/whitenoise/)
 - [dj-database-url](https://warehouse.python.org/project/dj-database-url/)
+=======
+# site
+>>>>>>> bfdf2bd35f6147ed2d272daddbfdbe13f73f9675
