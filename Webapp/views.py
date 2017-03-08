@@ -34,14 +34,14 @@ def rpg(request):
 	}
 	return render(request,'rpg.html',inventory)
 def formulas(request):
-	form(request.POST)
+
 	
 	context= {
-	'distance': form(request.POST).data,
+	'distance': form.data,
 	#'timetaken': form.data['timetaken'],
 	#'mass': form.data['mass'],
 	#'gforce': form.data['gforce'],
-	'form':	form(request.POST),
+	'form':form,
 	}
 		
 	return render(request, 'formulas.html',context)
