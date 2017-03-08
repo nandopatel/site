@@ -21,6 +21,9 @@ def booking(request):
 def currency(request):
 	return render(request,'Currency.html')
 
+def stunningsingapore(request):
+	return render(request,'stunningsingapore.html')
+
 def gallery(request):
 	return render(request,'Gallery.html')
 def rpg(request):
