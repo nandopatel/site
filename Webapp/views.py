@@ -34,7 +34,7 @@ def rpg(request):
 	}
 	return render(request,'rpg.html',inventory)
 def formulas(request):
-
+	form = form(request.POST)
 	
 	context= {
 	'distance': form.data,
