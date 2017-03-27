@@ -4,7 +4,7 @@ from django.db import models
 class speedandweight(models.Model):
 	comments=models.IntegerField(blank=True)
 	weight=models.IntegerField(blank=True)
-	Gravitational_Force=models.IntegerField(max_length=350,blank=True)
+	Gravitational_Force=models.FloatField(max_length=350,blank=True)
 	mass=models.IntegerField(max_length=350,blank=True)
 	time=models.IntegerField(max_length=350,blank=True)
 	distance_travelled=models.IntegerField(max_length=350,unique=True)
