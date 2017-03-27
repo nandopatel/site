@@ -1,12 +1,34 @@
 {% extends "base.html" %}
 {%block content%}
-
+<!--
  <form method="POST" class="post-form">{% csrf_token %}
         <table>
 			{{ form.as_table }}
 		</table>
         <button type="submit" class="save btn btn-default">Save</button>
     </form>
+-->
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+</head>
 
+<br>
+<br>
+<h1>PIVX</h1>
+<h1 style="font-family:Sans-serif">{{price}}</h1>
 
+<p id='percent_change' style="font-family:Sans-serif;color:green">{{percent_change}}</p>
+
+<script type="text/javascript">
+$(document).ready(function(){
+var change = $("#percent_change");
+var str = change.text(); 
+var res = str.replace("(",'');
+var res = res.replace(")",'');
+var res = res.replace("%",'');
+if(res<0){
+	$("#percent_change").css('color','red');	
+
+}});
+</script>
 {%endblock%}

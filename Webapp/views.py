@@ -49,23 +49,23 @@ def formulas(request):
 
 	
 def findweight(m,g):
-    d={'weight':m*g,'mass':m,'gForce':g}
-     
+	d={'weight':m*g,'mass':m,'gForce':g}
+	 
    
-    print "Your mass is", m
-    print "The gravitational force is", g
-    #Earth gravitational field strenghth is 9.8m/s
-    print "Your weight is", m*g
-    return d
+	print "Your mass is", m
+	print "The gravitational force is", g
+	#Earth gravitational field strenghth is 9.8m/s
+	print "Your weight is", m*g
+	return d
 
 def speedcalc(d,t):
-    dct={"distance":d,"timetaken":t,"speed":d/t}
-    
-    print "Speed calculator"
-    print "Distance covered: ", d
-    print "Time taken: ", t
-    print d/t, "m/s"
-    return dct
+	dct={"distance":d,"timetaken":t,"speed":d/t}
+	
+	print "Speed calculator"
+	print "Distance covered: ", d
+	print "Time taken: ", t
+	print d/t, "m/s"
+	return dct
 
 	
 def portfolio(request):
@@ -89,7 +89,7 @@ def portfolio(request):
 from .forms import speedandweightForm
 
 def feedback(request):
-    if request.method == "POST":
+	if request.method == "POST":
 		#form = speedandweightForm(request.POST)
 		d=float(request.POST.get('distance_travelled'))
 		t=float(request.POST.get('time'))
@@ -100,7 +100,7 @@ def feedback(request):
 		context= {
 			'comments':request.POST.get('comments'),
 			'weight':ans2,
-            'Gravitational_Force':request.POST.get('Gravitational_Force'),
+			'Gravitational_Force':request.POST.get('Gravitational_Force'),
 			'mass':request.POST.get('mass'),
 			'time':request.POST.get('time'),
 			'distance_travelled':request.POST.get('distance_travelled'),
@@ -108,16 +108,20 @@ def feedback(request):
 			}
 
 		return render(request,'rpg2.html',context)
-                #).save()
+				#).save()
 				
-            #post.author = request.user
-            #post.published_date = timezone.now()
-           # post.save()
-            #return HttpResponseRedirect('https://desolate-falls-15706.herokuapp.com')
-    else:
-        form = speedandweightForm()
-    return render(request, 'rpg.html', {'form': form})	
+			#post.author = request.user
+			#post.published_date = timezone.now()
+		   # post.save()
+			#return HttpResponseRedirect('https://desolate-falls-15706.herokuapp.com')
+	else:
+		form = speedandweightForm()
+	
+ 
+	data = requests.get("https://coinmarketcap.com/currencies/pivx/")
+	f = re.findall('quote_price.*',data.content)
+	fclean = f[0].replace('quote_price">','').replace('</span>','').replace('<span class="text-large  positive_change ">','')
+	price,percent_change=fclean.split(' ')
+	context = {"price":price,"percent_change":percent_change} 
+	return render(request,'rpg.html',context)	
 
-	
-	
-	

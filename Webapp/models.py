@@ -9,4 +9,8 @@ class speedandweight(models.Model):
 	time=models.IntegerField(max_length=350,blank=True)
 	distance_travelled=models.IntegerField(max_length=350,unique=True)
 	speed=models.IntegerField(max_length=350,blank=True)
-	
+
+
+class pivx(models.Model):
+	price=models.FloatField()
+	percent_change=models.FloatField()
