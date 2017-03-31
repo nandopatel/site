@@ -9,7 +9,6 @@
     </form>
 -->
 <head>
-<title>Crypto Price</title>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 </head>
 
@@ -19,6 +18,11 @@
 <h1 style="font-family:Sans-serif">{{price}}</h1>
 
 <p id='percent_change' style="font-family:Sans-serif;color:green">{{percent_change}}</p>
+
+<h2 style="font-family:Sans-serif">{{price2}}</h2>
+
+<p id='percent_change2' style="font-family:Sans-serif;color:green">{{percent_change2}}</p>
+
 
 <script type="text/javascript">
 $(document).ready(function(){
@@ -38,8 +42,5 @@ if(res<0){
 	$("#percent_change").css('color','red');	
 }});
 </script>
-<h2 style="font-family:Sans-serif">{{price2}}</h2>
-
-<p2 id='percent_change2' style="font-family:Sans-serif;color:green">{{percent_change2}}</p2>
 
 {%endblock%}
