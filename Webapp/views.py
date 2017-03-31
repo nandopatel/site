@@ -118,7 +118,7 @@ def feedback(request):
 		form = speedandweightForm()
 	
  
-	pivx_data = requests.get("https://coinmarketcap.com/currencies/pivx/")
+ 	pivx_data = requests.get("https://coinmarketcap.com/currencies/pivx/")
 	f = re.findall('quote_price.*',pivx_data.content)
 	fclean = f[0].replace('quote_price">','').replace('</span>','').replace('<span class="text-large  positive_change ">','')
 	pivx_price,pivx_percent_change=fclean.split(' ')
