@@ -27,17 +27,19 @@ var str = change.text();
 var res = str.replace("(",'');
 var res = res.replace(")",'');
 var res = res.replace("%",'');
-if(res<0){
-	$("#percent_change").css('color','red');	
-}});
-$(document).ready(function(){
-console.log(res2)
+
 var change2 = $("#percent_change2");
 var str2 = change2.text(); 
 var res2 = str2.replace("(",'');
 var res2 = res2.replace(")",'');
 var res2 = res2.replace("%",'');
-});
+
+if(res<0){
+	$("#percent_change").css('color','red');	
+}});
+
+
+
 
 </script>
 <h2 style="font-family:Sans-serif">{{price2}}</h2>
