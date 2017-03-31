@@ -30,6 +30,14 @@ var res = res.replace("%",'');
 if(res<0){
 	$("#percent_change").css('color','red');	
 
+$(document).ready(function(){
+
+var change = $("#percent_change2");
+var str2 = change.text(); 
+var res2 = str.replace("(",'');
+var res2 = res.replace(")",'');
+var res2 = res.replace("%",'');
+
 }});
 </script>
 {%endblock%}
