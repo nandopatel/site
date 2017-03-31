@@ -118,16 +118,17 @@ def feedback(request):
 		form = speedandweightForm()
 	
  
-	data = requests.get("https://coinmarketcap.com/currencies/pivx/")
-	f = re.findall('quote_price.*',data.content)
+	pivx_data = requests.get("https://coinmarketcap.com/currencies/pivx/")
+	f = re.findall('quote_price.*',pivx_data.content)
 	fclean = f[0].replace('quote_price">','').replace('</span>','').replace('<span class="text-large  positive_change ">','')
-	price,percent_change=fclean.split(' ')
-	context = {"price":price,"percent_change":percent_change} 
-	return render(request,'rpg.html',context)	
-
-	data2 = requests.get("https://coinmarketcap.com/currencies/ripple/")
-	f2 = re.findall('quote_price.*',data2.content)
+	pivx_price,pivx_percent_change=fclean.split(' ')
+	
+	
+	btc_data = requests.get("https://coinmarketcap.com/currencies/bitcoin/")
+	f2 = re.findall('quote_price.*',btc_data.content)
 	fclean2 = f2[0].replace('quote_price">','').replace('</span>','').replace('<span class="text-large  positive_change ">','')
-	price2,percent_change2=fclean2.split(' ')
-	context2 = {"price2":price2,"percent_change2":percent_change2} 
-	return render(request,'rpg.html',context2)	
+	btc_price,btc_percent_change=fclean2.split(' ')
+	
+
+	context = {"pivx_price":pivx_price,"pivx_percent_change":pivx_percent_change,"btc_price":btc_price,"btc_percent_change":btc_percent_change} 
+	return render(request,'rpg.html',context)	

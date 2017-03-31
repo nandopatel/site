@@ -12,16 +12,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 </head>
 
-<br>
-<br>
-<h1>PIVX</h1>
-<h1 style="font-family:Sans-serif">{{price}}</h1>
 
-<p id='percent_change' style="font-family:Sans-serif;color:green">{{percent_change}}</p>
-
-<h2 style="font-family:Sans-serif">{{price2}}</h2>
-
-<p id='percent_change2' style="font-family:Sans-serif;color:green">{{percent_change2}}</p>
 
 
 <script type="text/javascript">
@@ -42,5 +33,19 @@ if(res<0){
 	$("#percent_change").css('color','red');	
 }});
 </script>
+<br>
+<br>
+<h1>PIVX</h1>
+
+<h1 style="font-family:Sans-serif">{{pivx_price}}</h1>
+
+<p id='percent_change' style="font-family:Sans-serif;color:green">{{pivx_percent_change}}</p>
+<br>
+<br>
+<h1>BTC</h1>
+
+<h2 style="font-family:Sans-serif">{{btc_price}}</h2>
+
+<p id='percent_change2' style="font-family:Sans-serif;color:green">{{btc_percent_change}}</p>
 
 {%endblock%}
