@@ -132,3 +132,4 @@ def feedback(request):
 
 	context = {"pivx_price":pivx_price,"pivx_percent_change":pivx_percent_change,"btc_price":btc_price,"btc_percent_change":btc_percent_change} 
 	return render(request,'rpg.html',context)	
+
