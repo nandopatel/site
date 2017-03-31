@@ -82,8 +82,9 @@
     $("#menu-toggle").click(function(e) {
         e.preventDefault();
         $("#wrapper").toggleClass("toggled");
-        $("menu-toggle").text("Toggled")
-    });
+        $(this).text(function(i, text){
+          return text === "Menu Toggle" ? "Toggled" : "Menu Toggle";
+      });
     </script>
 
 
