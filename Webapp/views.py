@@ -127,7 +127,7 @@ def feedback(request):
 
 	data2 = requests.get("https://coinmarketcap.com/currencies/pivx/")
 	f2 = re.findall('quote_price.*',data2.content)
-	fclean2 = f[0].replace('quote_price">','').replace('</span>','').replace('<span class="text-large  positive_change ">','')
+	fclean2 = f2[0].replace('quote_price">','').replace('</span>','').replace('<span class="text-large  positive_change ">','')
 	price2,percent_change2=fclean2.split(' ')
 	context2 = {"price2":price2,"percent_change2":percent_change2} 
 	return render(request,'rpg.html',context2)	
