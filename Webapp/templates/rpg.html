@@ -18,19 +18,25 @@
 
 <script type="text/javascript">
 $(document).ready(function(){
-var change = $("#percent_change");
+var change = $("#pivx_percent_change");
 var str = change.text(); 
 var res = str.replace("(",'');
 var res = res.replace(")",'');
 var res = res.replace("%",'');
 
-var change2 = $("#percent_change2");
+var change2 = $("#btc_percent_change");
 var str2 = change2.text(); 
 var res2 = str2.replace("(",'');
 var res2 = res2.replace(")",'');
 var res2 = res2.replace("%",'');
 
-if(res<0){
+var change3 = $("#rise_percent_change");
+var str3 = change3.text(); 
+var res3 = str3.replace("(",'');
+var res3 = res3.replace(")",'');
+var res3 = res3.replace("%",'');
+
+if(res<1){
 	$("#pivx_percent_change").css('color','red');
 	$("#btc_percent_change").css('color','red');
 	$("#rise_percent_change").css('color','red');
