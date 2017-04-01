@@ -128,8 +128,14 @@ def feedback(request):
 	f2 = re.findall('quote_price.*',btc_data.content)
 	fclean2 = f2[0].replace('quote_price">','').replace('</span>','').replace('<span class="text-large  positive_change ">','')
 	btc_price,btc_percent_change=fclean2.split(' ')
+
+
+	rise_data = requests.get("https://coinmarketcap.com/currencies/rise/")
+	f3 = re.findall('quote_price.*',rise_data.content)
+	fclean3 = f2[0].replace('quote_price">','').replace('</span>','').replace('<span class="text-large  positive_change ">','')
+	rise_price,rise_percent_change=fclean3.split(' ')
 	
 
-	context = {"pivx_price":pivx_price,"pivx_percent_change":pivx_percent_change,"btc_price":btc_price,"btc_percent_change":btc_percent_change} 
+	context = {"pivx_price":pivx_price,"pivx_percent_change":pivx_percent_change,"btc_price":btc_price,"btc_percent_change"::btc_percent_change,"rise_price":rise_price,"rise_percent_change":rise_percent_change} 
 	return render(request,'rpg.html',context)	
 
