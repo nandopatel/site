@@ -120,19 +120,19 @@ def feedback(request):
  
  	pivx_data = requests.get("https://coinmarketcap.com/currencies/pivx/")
 	f = re.findall('quote_price.*',pivx_data.content)
-	fclean = f[0].replace('quote_price">','').replace('</span>','').replace('<span class="text-large  positive_change ">','')
+	fclean = f[0].replace('quote_price">','').replace('</span>','').replace('<span class="text-large  positive_change ">','').replace('<span class="text-large  negative_change">','')
 	pivx_price,pivx_percent_change=fclean.split(' ')
 	
 	
 	btc_data = requests.get("https://coinmarketcap.com/currencies/bitcoin/")
 	f2 = re.findall('quote_price.*',btc_data.content)
-	fclean2 = f2[0].replace('quote_price">','').replace('</span>','').replace('<span class="text-large  positive_change ">','')
+	fclean2 = f2[0].replace('quote_price">','').replace('</span>','').replace('<span class="text-large  positive_change ">','').replace('<span class="text-large  negative_change">','')
 	btc_price,btc_percent_change=fclean2.split(' ')
 
 
 	rise_data = requests.get("https://coinmarketcap.com/currencies/rise/")
 	f3 = re.findall('quote_price.*',rise_data.content)
-	fclean3 = f3[0].replace('quote_price">','').replace('</span>','').replace('<span class="text-large  positive_change ">','')
+	fclean3 = f3[0].replace('quote_price">','').replace('</span>','').replace('<span class="text-large  positive_change ">','').replace('<span class="text-large  negative_change">','')
 	rise_price,rise_percent_change=fclean3.split(' ')
 	
 
