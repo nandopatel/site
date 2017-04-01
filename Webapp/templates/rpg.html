@@ -31,7 +31,9 @@ var res2 = res2.replace(")",'');
 var res2 = res2.replace("%",'');
 
 if(res<0){
-	$("#percent_change").css('color','red');	
+	$("#pivx_percent_change").css('color','red');
+	$("#btc_percent_change").css('color','red');
+	$("#rise_percent_change").css('color','red');
 }});
 </script>
 
@@ -40,7 +42,7 @@ if(res<0){
 
 
 <div class="w3-card-4 w3-hover-opacity" id="pivxdiv">
-	<h1 class="w3-container w3-blue"><b>PIVX</b></h1>
+	<h1 class="w3-container w3-blue"><b><a href="default.asp" target="_blank">PIVX</b></h1>
 
 	<div class="w3-container">
   		<h2 style="font-family:Sans-serif">{{pivx_price}}</h2>
