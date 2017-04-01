@@ -132,7 +132,7 @@ def feedback(request):
 
 	rise_data = requests.get("https://coinmarketcap.com/currencies/rise/")
 	f3 = re.findall('quote_price.*',rise_data.content)
-	fclean3 = f2[0].replace('quote_price">','').replace('</span>','').replace('<span class="text-large  positive_change ">','')
+	fclean3 = f3[0].replace('quote_price">','').replace('</span>','').replace('<span class="text-large  positive_change ">','')
 	rise_price,rise_percent_change=fclean3.split(' ')
 	
 
