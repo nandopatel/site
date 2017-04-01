@@ -136,6 +136,6 @@ def feedback(request):
 	rise_price,rise_percent_change=fclean3.split(' ')
 	
 
-	context = {"pivx_price":pivx_price,"pivx_percent_change":pivx_percent_change,"btc_price":btc_price,"btc_percent_change"::btc_percent_change,"rise_price":rise_price,"rise_percent_change":rise_percent_change} 
+	context = {"pivx_price":pivx_price,"pivx_percent_change":pivx_percent_change,"btc_price":btc_price,"btc_percent_change":btc_percent_change,"rise_price":rise_price,"rise_percent_change":rise_percent_change} 
 	return render(request,'rpg.html',context)	
 
