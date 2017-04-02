@@ -134,8 +134,13 @@ def feedback(request):
 	f3 = re.findall('quote_price.*',rise_data.content)
 	fclean3 = f3[0].replace('quote_price">','').replace('</span>','').replace('<span class="text-large  positive_change ">','').replace('<span class="text-large  negative_change">','')
 	rise_price,rise_percent_change=fclean3.split(' ')
+
+	ark_data = requests.get("https://coinmarketcap.com/currencies/ark/")
+	f4 = re.findall('quote_price.*',ark_data.content)
+	fclean4 = f4[0].replace('quote_price">','').replace('</span>','').replace('<span class="text-large  positive_change ">','').replace('<span class="text-large  negative_change">','')
+	ark_price,ark_percent_change=fclean4.split(' ')
 	
 
-	context = {"pivx_price":pivx_price,"pivx_percent_change":pivx_percent_change,"btc_price":btc_price,"btc_percent_change":btc_percent_change,"rise_price":rise_price,"rise_percent_change":rise_percent_change} 
+	context = {"pivx_price":pivx_price,"pivx_percent_change":pivx_percent_change,"btc_price":btc_price,"btc_percent_change":btc_percent_change,"rise_price":rise_price,"rise_percent_change":rise_percent_change,"ark_price":ark_price,"ark_percent_change":ark_percent_change} 
 	return render(request,'rpg.html',context)	
 

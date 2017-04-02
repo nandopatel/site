@@ -36,11 +36,17 @@ var res3 = str3.replace("(",'');
 var res3 = res3.replace(")",'');
 var res3 = res3.replace("%",'');
 
+var change4 = $("#ark_percent_change");
+var str4 = change4.text(); 
+var res4 = str4.replace("(",'');
+var res4 = res4.replace(")",'');
+var res4 = res4.replace("%",'');
+
 if(res<1){
 	$("#pivx_percent_change").css('color','red');
-	$("#btc_percent_change").css('color','red');
-	$("#rise_percent_change").css('color','red');
+
 }});
+
 </script>
 
 <br>
@@ -68,7 +74,7 @@ if(res<1){
 
 	<div class="w3-container">
 		<h2 style="font-family:Sans-serif;">{{btc_price}}</h2>
-		<p id='percent_change2' style="font-family:Sans-serif;color:green;text-align:right">{{btc_percent_change}}</p>
+		<p id='btc_percent_change' style="font-family:Sans-serif;color:green;text-align:right">{{btc_percent_change}}</p>
 	</div>
 
 	<footer class="w3-container w3-blue">
@@ -84,13 +90,30 @@ if(res<1){
 
 	<div class="w3-container">
 		<h2 style="font-family:Sans-serif;">{{rise_price}}</h2>
-		<p id='percent_change2' style="font-family:Sans-serif;color:green;text-align:right">{{rise_percent_change}}</p>
+		<p id='rise_percent_change' style="font-family:Sans-serif;color:green;text-align:right">{{rise_percent_change}}</p>
 	</div>
 
 	<footer class="w3-container w3-blue">
 		<p>Rise</p>
 	</footer>
 </div>
+
+<br>
+<br>
+
+<div class="w3-card-4 w3-hover-opacity" id="arkdiv">
+	<h1 class="w3-container w3-blue"><b>ARK</b></h1>
+
+	<div class="w3-container">
+		<h2 style="font-family:Sans-serif;">{{ark_price}}</h2>
+		<p id='ark_percent_change' style="font-family:Sans-serif;color:green;text-align:right">{{ark_percent_change}}</p>
+	</div>
+
+	<footer class="w3-container w3-blue">
+		<p>Ark</p>
+	</footer>
+</div>
+
 
 
 {%endblock%}
