@@ -13,7 +13,7 @@
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 </head>
 
-
+<input id="search-text" />
 
 
 <script type="text/javascript">
@@ -43,21 +43,47 @@ var res4 = res4.replace(")",'');
 var res4 = res4.replace("%",'');
 
 if(res<1){
-	console.log('1');
+
 	$("#pivx_percent_change").css('color','red');
 }
 if(res2<1){
-	console.log('2');
+
 	$("#btc_percent_change").css('color','red');
 }
 if(res3<1){
-	console.log('3');
+
 	$("#rise_percent_change").css('color','red');
 }
 if(res4<1){
-	console.log('4');
+
 	$("#ark_percent_change").css('color','red');
 }
+
+});
+
+coins = ['pivx','btc','rise','ark']
+
+$("#search-text").on('keyup',function(){
+
+	$(this).css('background-color','green');
+	var user_input = $(this).val();
+	var index = $.inArray(user_input.toLowerCase(), coins);
+	console.log(index);
+	console.log(coins[index]);
+	var match_id='#' + coins[index] + 'div';
+	console.log(match_id);
+	for (i=0;i<coins.length;i++){
+		var coin_check = '#'+coins[i]+'div';
+		console.log(coin_check);
+		if(coin_check != match_id && index != -1){
+				$(coin_check).hide();
+		}
+		else if (index == -1){
+			$(coin_check).show();
+		}
+
+
+	}	
 
 });
 
