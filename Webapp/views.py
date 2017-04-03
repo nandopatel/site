@@ -140,7 +140,16 @@ def feedback(request):
 	fclean4 = f4[0].replace('quote_price">','').replace('</span>','').replace('<span class="text-large  positive_change ">','').replace('<span class="text-large  negative_change">','')
 	ark_price,ark_percent_change=fclean4.split(' ')
 	
+	dash_data = requests.get("https://coinmarketcap.com/currencies/dash/")
+	f5 = re.findall('quote_price.*',dash_data.content)
+	fclean5 = f5[0].replace('quote_price">','').replace('</span>','').replace('<span class="text-large  positive_change ">','').replace('<span class="text-large  negative_change">','')
+	dash_price,dash_percent_change=fclean5.split(' ')
 
-	context = {"pivx_price":pivx_price,"pivx_percent_change":pivx_percent_change,"btc_price":btc_price,"btc_percent_change":btc_percent_change,"rise_price":rise_price,"rise_percent_change":rise_percent_change,"ark_price":ark_price,"ark_percent_change":ark_percent_change} 
+	ethereum_data = requests.get("https://coinmarketcap.com/currencies/ethereum/")
+	f6 = re.findall('quote_price.*',ethereum_data.content)
+	fclean6 = f6[0].replace('quote_price">','').replace('</span>','').replace('<span class="text-large  positive_change ">','').replace('<span class="text-large  negative_change">','')
+	ethereum_price,ethereum_percent_change=fclean6.split(' ')
+
+	context = {"pivx_price":pivx_price,"pivx_percent_change":pivx_percent_change,"btc_price":btc_price,"btc_percent_change":btc_percent_change,"rise_price":rise_price,"rise_percent_change":rise_percent_change,"ark_price":ark_price,"ark_percent_change":ark_percent_change,"dash_price":dash_price,"dash_percent_change":dash_percent_change,"ethereum_price":ethereum_price,"ethereum_percent_change":ethereum_percent_change} 
 	return render(request,'rpg.html',context)	
 

@@ -42,6 +42,17 @@ var res4 = str4.replace("(",'');
 var res4 = res4.replace(")",'');
 var res4 = res4.replace("%",'');
 
+var change5 = $("#dash_percent_change");
+var str5 = change5.text(); 
+var res5 = str5.replace("(",'');
+var res5 = res5.replace(")",'');
+var res5 = res5.replace("%",'');
+
+var change6 = $("#ethereum_percent_change");
+var str6 = change6.text(); 
+var res6 = str6.replace("(",'');
+var res6 = res6.replace(")",'');
+var res6 = res6.replace("%",'');
 if(res<1){
 
 	$("#pivx_percent_change").css('color','red');
@@ -58,10 +69,17 @@ if(res4<1){
 
 	$("#ark_percent_change").css('color','red');
 }
+if(res5<1){
 
+	$("#dash_percent_change").css('color','red');
+}
+if(res6<1){
+
+	$("#ethereum_percent_change").css('color','red');
+}
 });
 
-coins = ['pivx','btc','rise','ark']
+coins = ['pivx','btc','rise','ark','dash','ethereum']
 
 $("#search-text").on('keyup',function(){
 
@@ -155,6 +173,35 @@ $("#search-text").on('keyup',function(){
 	</footer>
 </div>
 
+<br>
+<br>
 
+<div class="w3-card-4 w3-hover-opacity" id="dashdiv">
+	<h1 class="w3-container w3-blue"><b>DASH</b></h1>
 
+	<div class="w3-container">
+		<h2 style="font-family:Sans-serif;">{{dash_price}}</h2>
+		<p id='ark_percent_change' style="font-family:Sans-serif;color:green;text-align:right">{{dash_percent_change}}</p>
+	</div>
+
+	<footer class="w3-container w3-blue">
+		<p>Dash</p>
+	</footer>
+</div>
+
+<br>
+<br>
+
+<div class="w3-card-4 w3-hover-opacity" id="ethereumdiv">
+	<h1 class="w3-container w3-blue"><b>ETH</b></h1>
+
+	<div class="w3-container">
+		<h2 style="font-family:Sans-serif;">{{ethereum_price}}</h2>
+		<p id='ark_percent_change' style="font-family:Sans-serif;color:green;text-align:right">{{ethereum_percent_change}}</p>
+	</div>
+
+	<footer class="w3-container w3-blue">
+		<p>Ethereum</p>
+	</footer>
+</div>
 {%endblock%}
