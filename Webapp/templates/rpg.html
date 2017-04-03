@@ -65,7 +65,7 @@ coins = ['pivx','btc','rise','ark']
 
 $("#search-text").on('keyup',function(){
 
-	$(this).css('background-color','green');
+	$(this).css('background-color','lightblue');
 	var user_input = $(this).val();
 	var index = $.inArray(user_input.toLowerCase(), coins);
 	console.log(index);
@@ -80,6 +80,7 @@ $("#search-text").on('keyup',function(){
 		}
 		else if (index == -1){
 			$(coin_check).show();
+			$(this).css('background-color','white');
 		}
 
 
