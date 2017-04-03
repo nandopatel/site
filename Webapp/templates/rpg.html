@@ -43,8 +43,23 @@ var res4 = res4.replace(")",'');
 var res4 = res4.replace("%",'');
 
 if(res<1){
+	console.log('1');
 	$("#pivx_percent_change").css('color','red');
-}});
+}
+if(res2<1){
+	console.log('2');
+	$("#btc_percent_change").css('color','red');
+}
+if(res3<1){
+	console.log('3');
+	$("#rise_percent_change").css('color','red');
+}
+if(res4<1){
+	console.log('4');
+	$("#ark_percent_change").css('color','red');
+}
+
+});
 
 </script>
 
