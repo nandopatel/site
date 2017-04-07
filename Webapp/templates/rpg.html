@@ -73,28 +73,35 @@ if(res6<0){
 }
 });
 
-coins = ['pivx','btc','rise','ark','dash','ethereum']
+
+
+$(document).ready(function(){
+
 
 $("#search-text").on('keyup',function(){
+	var query = $(this).val();
 
-	$(this).css('background-color','lightblue');
-	var user_input = $(this).val();
-	var index = $.inArray(user_input.toLowerCase(), coins);
-	console.log(index);
-	console.log(coins[index]);
-	var match_id='#' + coins[index] + 'div';
-	console.log(match_id);
-	for (i=0;i<coins.length;i++){
-		var coin_check = '#'+coins[i]+'div';
-		console.log(coin_check);
-		if(coin_check != match_id && index != -1){
-				$(coin_check).hide();
-		}
-		else if (index == -1){
-			$(coin_check).show();
-			$(this).css('background-color','white');
-		}
-	}	
+var coins = ['pivx','btc','rise','ark','dash','ethereum']
+
+var results = $(coins)
+        .map(function(i,v){ 
+            if(v.toLowerCase().indexOf(query.toLowerCase())!=-1){return v} 
+        }).get()
+        
+        for (i = 0; i <= coins.length; i++) {
+        
+        	if(coins[i]!=results[0]){
+        		$('#' + coins[i]).hide();
+        		$('#' + results[0]).show();
+
+        	if(query==''){
+        		for (j = 0; j <= coins.length; j++) {
+        			$('#' + coins[j]).show();
+        		}
+        	}
+        }   
+    };
+});
 });
 
 </script>
@@ -102,7 +109,7 @@ $("#search-text").on('keyup',function(){
 <br>
 <br>
 
-<div class="w3-card-4 w3-hover-opacity" id="pivxdiv">
+<div class="w3-card-4 w3-hover-opacity" id="pivx">
 	<h1 class="w3-container w3-blue"><b>PIVX</b></h1>
 
 	<div class="w3-container">
@@ -118,7 +125,7 @@ $("#search-text").on('keyup',function(){
 <br>
 <br>
 
-<div class="w3-card-4 w3-hover-opacity" id="btcdiv">
+<div class="w3-card-4 w3-hover-opacity" id="btc">
 	<h1 class="w3-container w3-blue"><b>BTC</b></h1>
 
 	<div class="w3-container">
@@ -134,7 +141,7 @@ $("#search-text").on('keyup',function(){
 <br>
 <br>
 
-<div class="w3-card-4 w3-hover-opacity" id="risediv">
+<div class="w3-card-4 w3-hover-opacity" id="rise">
 	<h1 class="w3-container w3-blue"><b>RISE</b></h1>
 
 	<div class="w3-container">
@@ -150,7 +157,7 @@ $("#search-text").on('keyup',function(){
 <br>
 <br>
 
-<div class="w3-card-4 w3-hover-opacity" id="arkdiv">
+<div class="w3-card-4 w3-hover-opacity" id="ark">
 	<h1 class="w3-container w3-blue"><b>ARK</b></h1>
 
 	<div class="w3-container">
@@ -166,7 +173,7 @@ $("#search-text").on('keyup',function(){
 <br>
 <br>
 
-<div class="w3-card-4 w3-hover-opacity" id="dashdiv">
+<div class="w3-card-4 w3-hover-opacity" id="dash">
 	<h1 class="w3-container w3-blue"><b>DASH</b></h1>
 
 	<div class="w3-container">
@@ -182,7 +189,7 @@ $("#search-text").on('keyup',function(){
 <br>
 <br>
 
-<div class="w3-card-4 w3-hover-opacity" id="ethereumdiv">
+<div class="w3-card-4 w3-hover-opacity" id="ethereum">
 	<h1 class="w3-container w3-blue"><b>ETH</b></h1>
 
 	<div class="w3-container">
