@@ -92,6 +92,7 @@ var results = $(coins)
         
         	if(coins[i]!=results[0]){										//if coins != userinput, hide all but userinput
         		$('#' + coins[i]).hide();
+        		$("#search-text").css('background-color','lightblue')
         		$('#' + results[0]).show();
 
         	if(query==''){													//if textbox blank, show all
