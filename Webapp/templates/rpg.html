@@ -78,23 +78,23 @@ if(res6<0){
 $(document).ready(function(){
 
 
-$("#search-text").on('keyup',function(){
+$("#search-text").on('keyup',function(){ 									//activates on keyup
 	var query = $(this).val();
 
-var coins = ['pivx','btc','rise','ark','dash','ethereum']
+var coins = ['pivx','btc','rise','ark','dash','ethereum']					//declaring coins list
 
 var results = $(coins)
-        .map(function(i,v){ 
+        .map(function(i,v){ 												//fuzzy search function
             if(v.toLowerCase().indexOf(query.toLowerCase())!=-1){return v} 
         }).get()
         
-        for (i = 0; i <= coins.length; i++) {
+        for (i = 0; i <= coins.length; i++) {								//looping before selection
         
-        	if(coins[i]!=results[0]){
+        	if(coins[i]!=results[0]){										//if coins != userinput, hide all but userinput
         		$('#' + coins[i]).hide();
         		$('#' + results[0]).show();
 
-        	if(query==''){
+        	if(query==''){													//if textbox blank, show all
         		for (j = 0; j <= coins.length; j++) {
         			$('#' + coins[j]).show();
         		}
@@ -178,7 +178,7 @@ var results = $(coins)
 
 	<div class="w3-container">
 		<h2 style="font-family:Sans-serif;">{{dash_price}}</h2>
-		<p id='ark_percent_change' style="font-family:Sans-serif;color:green;text-align:right">{{dash_percent_change}}</p>
+		<p id='dash_percent_change' style="font-family:Sans-serif;color:green;text-align:right">{{dash_percent_change}}</p>
 	</div>
 
 	<footer class="w3-container w3-blue">
@@ -194,7 +194,7 @@ var results = $(coins)
 
 	<div class="w3-container">
 		<h2 style="font-family:Sans-serif;">{{ethereum_price}}</h2>
-		<p id='ark_percent_change' style="font-family:Sans-serif;color:green;text-align:right">{{ethereum_percent_change}}</p>
+		<p id='ethereum_percent_change' style="font-family:Sans-serif;color:green;text-align:right">{{ethereum_percent_change}}</p>
 	</div>
 
 	<footer class="w3-container w3-blue">
