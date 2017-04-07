@@ -96,6 +96,7 @@ var results = $(coins)
         		$('#' + results[0]).show();
 
         	if(query==''){													//if textbox blank, show all
+        		$("#search-text").css('background-color','white')
         		for (j = 0; j <= coins.length; j++) {
         			$('#' + coins[j]).show();
         		}
