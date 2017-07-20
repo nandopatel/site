@@ -53,6 +53,12 @@ var str6 = change6.text();
 var res6 = str6.replace("(",'');
 var res6 = res6.replace(")",'');
 var res6 = res6.replace("%",'');
+
+var change7 = $("#iop_percent_change");
+var str7 = change7.text(); 
+var res7 = str7.replace("(",'');
+var res7 = res7.replace(")",'');
+var res7 = res7.replace("%",'');
 if(res<0){
 	$("#pivx_percent_change").css('color','red');
 }
@@ -71,6 +77,9 @@ if(res5<0){
 if(res6<0){
 	$("#ethereum_percent_change").css('color','red');
 }
+if(res7<0){
+	$("#iop_percent_change").css('color','red');
+}
 });
 
 
@@ -81,7 +90,7 @@ $(document).ready(function(){
 $("#search-text").on('keyup',function(){ 									//activates on keyup
 	var query = $(this).val();
 
-var coins = ['pivx','btc','rise','ark','dash','ethereum']					//declaring coins list
+var coins = ['pivx','btc','rise','ark','dash','ethereum','iop']					//declaring coins list
 
 var results = $(coins)
         .map(function(i,v){ 												//fuzzy search function
@@ -201,6 +210,19 @@ var results = $(coins)
 
 	<footer class="w3-container w3-blue">
 		<p>Ethereum</p>
+	</footer>
+</div>
+
+<div class="w3-card-4 w3-hover-opacity" id="iop">
+	<h1 class="w3-container w3-blue"><b>IOP</b></h1>
+
+	<div class="w3-container">
+		<h2 style="font-family:Sans-serif;">{{iop_price}}</h2>
+		<p id='iop_percent_change' style="font-family:Sans-serif;color:green;text-align:right">{{iop_percent_change}}</p>
+	</div>
+
+	<footer class="w3-container w3-blue">
+		<p>Internet Of People</p>
 	</footer>
 </div>
 {%endblock%}
